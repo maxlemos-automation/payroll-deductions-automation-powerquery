@@ -60,10 +60,10 @@ Before running the automation, you must update the **Config** section in the Pow
 
 Example:
 
-deduction_codes C:\\Desktop\NewFolder\deduction_codes.xlsx
-employees_deduction C\\Desktop\NewFolder\employees_deduction.xlsx
-start_date 01/01/2025
-final_date 15/01/2025
+- deduction_codes C:\\Desktop\NewFolder\deduction_codes.xlsx
+- employees_deduction C\\Desktop\NewFolder\employees_deduction.xlsx
+- start_date 01/01/2025
+- final_date 15/01/2025
 
 
 
