@@ -86,6 +86,12 @@ Original Spanish business terminology is preserved to maintain usability and aut
 ## License
 This project is released under the MIT License – see the LICENSE file for details.
 
+🔗 Related Projects
+
+📌 Python Version of This Automation:  
+➡️ https://github.com/maxlemos-automation/data-automation-portfolio/tree/main/payroll-deductions-automation
+
+
 ## 👤 Author
 **Max Lemos — Data Automation & Analytics**  
 🔗 GitHub Profile: https://github.com/maxlemos-automation
