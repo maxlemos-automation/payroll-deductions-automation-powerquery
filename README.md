@@ -49,6 +49,22 @@ It reads raw Excel input files, reshapes the data, applies deduction code mappin
 4. Go to **Data → Refresh All**
 5. Review the `Final Output` table and export it to `.csv` using semicolon delimiters
 
+### 🛠️ Configuration Section
+
+Before running the automation, you must update the **Config** section in the Power Query script:
+
+| Field | Description |
+|-------|-------------|
+| `FolderPath` | The full path of the folder where all payroll deduction files are stored on your computer. |
+| `Period` | The settlement period for payroll (e.g. `"2025-01"` or `"2025-11-1st-half"`). |
+
+Example:
+
+```powerquery
+<img width="919" height="134" alt="image" src="https://github.com/user-attachments/assets/dc150f33-28bd-4d9e-8d16-f17ac6371863" />
+
+
+
 ---
 
 ## 🔒 Privacy & Authenticity
