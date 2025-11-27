@@ -55,13 +55,15 @@ Before running the automation, you must update the **Config** section in the Pow
 
 | Field | Description |
 |-------|-------------|
-| `FolderPath` | The full path of the folder where all payroll deduction files are stored on your computer. |
-| `Period` | The settlement period for payroll (e.g. `"2025-01"` or `"2025-11-1st-half"`). |
+| `Path` | The full path of the file where all payroll deduction files are stored on your computer. |
+| `Date` | The settlement period for payroll. |
 
 Example:
 
-```powerquery
-<img width="919" height="134" alt="image" src="https://github.com/user-attachments/assets/dc150f33-28bd-4d9e-8d16-f17ac6371863" />
+deduction_codes C:\\Desktop\NewFolder\deduction_codes.xlsx
+employees_deduction C\\Desktop\NewFolder\employees_deduction.xlsx
+start_date 01/01/2025
+final_date 15/01/2025
 
 
 
