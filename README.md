@@ -89,8 +89,7 @@ This project is released under the MIT License – see the LICENSE file for deta
 🔗 Related Projects
 
 📌 Python Version of This Automation:  
-➡️ https://github.com/maxlemos-automation/data-automation-portfolio/tree/main/payroll-deductions-automation
-
+➡️ https://github.com/maxlemos-automation/payroll-deductions-automation-python/tree/main
 
 ## 👤 Author
 **Max Lemos — Data Automation & Analytics**  
