@@ -83,6 +83,9 @@ Original Spanish business terminology is preserved to maintain usability and aut
 
 ---
 
+## License
+This project is released under the MIT License – see the LICENSE file for details.
+
 ## 👤 Author
 **Max Lemos — Data Automation & Analytics**  
 🔗 GitHub Profile: https://github.com/maxlemos-automation
