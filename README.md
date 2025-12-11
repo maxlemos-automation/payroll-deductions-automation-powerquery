@@ -1,19 +1,23 @@
 # 📌 Payroll Deductions Automation (Power Query Version)
 
-## 📍 Project Overview
-This project automates the transformation of employee deduction data into a payroll-ready format for the **Metiri payroll system**, using **Microsoft Power Query** in Excel.
+![Power Query](https://img.shields.io/badge/Power%20Query-M%20Language-FFD000?style=for-the-badge&logo=powerbi&logoColor=black)
+![Excel](https://img.shields.io/badge/Excel-Automation-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)
 
-It reads raw Excel input files, reshapes the data, applies deduction code mapping, and produces a structured dataset ready for TXT export and system import.
+## 📍 Project Overview
+This project automates the ETL (Extract, Transform, Load) process of employee deduction data into a payroll-ready format for the **Metiri ERP system**, using **Microsoft Power Query**.
+
+It reads raw Excel input files, reshapes the data, applies deduction code mapping, and produces a structured dataset ready for `.txt` export and system import.
 
 ---
 
 ## ⚙️ What the automation does
-- Imports a source Excel file with employee deductions  
-- Cleans and standardizes fields (missing values, numeric formats)
-- Converts data from **wide → long** layout
-- Maps deduction names to payroll system codes
-- Adds payroll metadata (date range, quantity, installment)
-- Produces a table ready for `.txt` export (semicolon `;` separated)
+- **Extracts:** Imports raw Excel files with employee deductions (unstructured).
+- **Cleans:** Standardizes fields (handling missing values, numeric formats).
+- **Transforms:** Converts data from human-readable **wide layout** to machine-readable **long layout** (Unpivoting).
+- **Maps:** Translates deduction names to specific payroll system codes (e.g., "Gym" → "DED_005").
+- **Enriches:** Adds payroll metadata (settlement dates, installments).
+- **Loads:** Produces a final table ready for semicolon (`;`) separated export.
 
 ---
 
@@ -21,78 +25,41 @@ It reads raw Excel input files, reshapes the data, applies deduction code mappin
 
 | File | Description |
 |------|-------------|
-| `PowerQuery_PayrollAutomation.xlsx` | Contains all Power Query logic and UI configuration |
-| `employee_deductions_sample.xlsx` | Example input file (anonymized test data) |
-| `deduction_codes.xlsx` | Mapping: deduction → payroll system code |
-| `example_output.xlsx` | Example final dataset exported from the query |
-
-> File names can be updated based on your structure in GitHub.
+| `PowerQuery_PayrollAutomation.xlsx` | **Core File.** Contains all Power Query (M) logic and UI. |
+| `employee_deductions_sample.xlsx` | Example input file (Anonymized Data). |
+| `deduction_codes.xlsx` | Mapping Table: Deduction Name → System Code. |
+| `example_output.xlsx` | Preview of the final dataset generated. |
 
 ---
 
 ## 🛠 Tech Stack
-- **Microsoft Excel**
-- **Power Query (M Language)**
+- **Microsoft Excel 365**
+- **Power Query (M Language)** for Data Transformation.
 
 ---
 
 ## ▶️ How to use
 
-1. Open `PowerQuery_PayrollAutomation.xlsx`
-2. Place the input files (`employee_deductions_sample.xlsx` + `deduction_codes.xlsx`)
-   inside the same folder
-3. Update the **Config Sheet** fields:
+1. Open `PowerQuery_PayrollAutomation.xlsx`.
+2. Place the input files (`employee_deductions_sample.xlsx` + `deduction_codes.xlsx`) inside a known folder.
+3. Update the **Config Table** in the Excel sheet (or Edit Parameters in Power Query):
    - `FilePath_Deductions`
    - `FilePath_CodeMapping`
-   - `StartDate`
-   - `FinalDate`
-4. Go to **Data → Refresh All**
-5. Review the `Final Output` table and export it to `.csv` using semicolon delimiters
+   - `StartDate` / `FinalDate`
+4. Go to **Data tab → Refresh All**.
+5. The `Final Output` table will update automatically. Copy and paste it into a `.txt` or `.csv` file.
 
-### 🛠️ Configuration Section
+### 🛠️ Configuration Example
 
-Before running the automation, you must update the **Config** section in the Power Query script:
+Ensure your paths are correct in the Config table.
+*Note: Use absolute paths for stability.*
 
-| Field | Description |
-|-------|-------------|
-| `Path` | The full path of the file where all payroll deduction files are stored on your computer. |
-| `Date` | The settlement period for payroll. |
-
-Example:
-
-- deduction_codes C:\\Desktop\NewFolder\deduction_codes.xlsx
-- employees_deduction C\\Desktop\NewFolder\employees_deduction.xlsx
-- start_date 01/01/2025
-- final_date 15/01/2025
-
-
-
----
-
-## 🔒 Privacy & Authenticity
-This automation is based on a **real payroll workflow** implemented in production.  
-All employee personal data has been fully anonymized.  
-Original Spanish business terminology is preserved to maintain usability and authenticity.
-
----
-
-## 🚀 Future Improvements
-- Direct TXT export using VBA or Office Scripts
-- Validation checks for missing deduction codes
-- Improved parameter UI for date selection
-
----
-
-## License
-This project is released under the MIT License – see the LICENSE file for details.
-
-🔗 Related Projects
-
-📌 Python Version of This Automation:  
-➡️ https://github.com/maxlemos-automation/payroll-deductions-automation-python/tree/main
-
-## 👤 Author
-**Max Lemos — Data Automation & Analytics**  
-🔗 GitHub Profile: https://github.com/maxlemos-automation
+```text
+| Parameter           | Value                                      |
+|---------------------|--------------------------------------------|
+| deduction_codes     | C:\Users\Max\Documents\Payroll\codes.xlsx  |
+| employees_deduction | C:\Users\Max\Documents\Payroll\input.xlsx  |
+| start_date          | 01/01/2025                                 |
+| final_date          | 15/01/2025                                 |
 
 
